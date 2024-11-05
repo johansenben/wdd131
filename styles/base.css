@@ -49,7 +49,7 @@ nav li:hover a {
     color: var(--nav-hover-txt-color)
 }
 main {
-    width: 800px;
+    width: 1000px;
     margin-block: 1rem;
 }
 main {
@@ -62,9 +62,7 @@ main {
     border: 1px solid;
     color: var(--card-body-txt-color);
 }
-.card p {
-    padding: 1rem;
-}
+
 .card h2 {
     color: var(--card-heading-txt-color);
     text-align: center;
@@ -73,15 +71,19 @@ main {
     box-sizing: border-box;
     padding: 1rem;
     margin: 0;
+    margin-bottom: 1rem;
 }
 .about-me {
     box-sizing: border-box;
     margin-right: 0.5rem;
+    padding-bottom: 1rem;
     grid-column: 1 / 4;
+}
+.about-me .content {
+    padding-inline: 1rem;
 }
 .about-me .content .profile{
     display: flex;
-    align-items: center;
 }
 .home-country h3{
     text-align: center;
@@ -115,5 +117,5 @@ footer p {
     width: 30%;
     height: 100px;
     float: left;
-    margin-inline: 1rem;
+    margin-right: 1rem;
 }
