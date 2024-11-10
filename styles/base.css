@@ -59,7 +59,7 @@ nav a:hover {
 }
 
 main {
-    width: 1000px;
+    max-width: 1000px;
     margin-block: 1rem;
     display: grid;
     grid-template-columns: repeat(4, 25%);
