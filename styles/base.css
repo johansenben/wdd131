@@ -3,12 +3,14 @@
 
     --header-bg-color: #ccc;
     --header-txt-color: #000;
-    --nav-txt-color: #000;
-    --nav-hover-txt-color: #44f;
+    --nav-bg-color: #bbb;
+    --nav-txt-color: #005;
+    --nav-hover-txt-color: #22f;
 
-    --card-heading-color: #77c;
+    --card-heading-color: #aaf;
     --card-heading-txt-color: #000;
     --card-body-txt-color: #000;
+    --card-body-bg-color: #eee;
 
     --footer-bg-color: var(--header-bg-color);
     --footer-txt-color: #000;
@@ -20,6 +22,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 header {
     display: flex;
     flex-direction: column;
@@ -27,32 +30,37 @@ header {
     background-color: var(--header-bg-color);
     color: var(--header-txt-color);
     width: 100%;
+    padding: 0;
     box-sizing: border-box;
-    padding-inline: 1rem;
 }
 nav {
     width: 100%;
+    background-color: var(--nav-bg-color);
 }
 nav ul {
     display: flex;
     justify-content: space-around;
     width: 100%;
+    padding: 0;
 }
 nav li {
     list-style: none;
+    transition: transform 0.25s ease-in-out;
 }
 nav a {
     text-decoration: none;
     color: var(--nav-txt-color)
 }
-nav li:hover a {
-    color: var(--nav-hover-txt-color)
+nav li:hover {
+    transform: scale(1.2);
 }
+nav li:hover a {
+    color: var(--nav-hover-txt-color);
+}
+
 main {
     width: 1000px;
     margin-block: 1rem;
-}
-main {
     display: grid;
     grid-template-columns: repeat(4, 25%);
 }
@@ -61,6 +69,7 @@ main {
     overflow: hidden;
     border: 1px solid;
     color: var(--card-body-txt-color);
+    background-color: var(--card-body-bg-color);
 }
 
 .card h2 {
@@ -73,6 +82,8 @@ main {
     margin: 0;
     margin-bottom: 1rem;
 }
+
+
 .about-me {
     box-sizing: border-box;
     margin-right: 0.5rem;
@@ -82,14 +93,45 @@ main {
 .about-me .content {
     padding-inline: 1rem;
 }
-.about-me .content .profile{
-    display: flex;
-}
-.home-country h3{
-    text-align: center;
-}
 .web-dev-resources {
     grid-column: 4 / -1;
+}
+
+.profile {
+    display: flex;
+}
+.about-me-text {
+    width: 80%;
+    display: inline-block;
+}
+.profile-img {
+    background-color: #ccc;
+    width: 15%;
+    height: auto;
+    border-radius: 0.5rem;
+    border: 1px solid #888
+}
+
+.home-country h3{
+    padding-left: 2rem;
+    width: 50%;
+    border-bottom: 1px solid #aaa;
+}
+.alberta-img {
+    background-color: #ccc;
+    width: 30%;
+    height: auto;
+    float: left;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #555;
+}
+
+.web-dev-resources ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
 }
 
 footer {
@@ -99,23 +141,8 @@ footer {
     flex-direction: column;
     width: 100%;
     background-color: var(--footer-bg-color);
+    padding-block: 0.5rem;
 }
 footer p {
     margin: 0;
-}
-
-
-.placeholder-profile-img {
-    flex-shrink: 0;
-    background-color: #ccc;
-    width: 100px;
-    height: 135px;
-    margin-inline: 1rem;
-}
-.placeholder-img {
-    background-color: #ccc;
-    width: 30%;
-    height: 100px;
-    float: left;
-    margin-right: 1rem;
 }
