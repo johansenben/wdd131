@@ -16,7 +16,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #ccc;
-    padding: 0.5rem 1rem;
+    padding: 0rem 2rem;
 }
 nav ul {
     padding: 0;
@@ -26,20 +26,19 @@ nav li {
 }
 nav a {
     text-decoration: none;
+    color: #026
 }
 nav {
     position: absolute;
     bottom: 0;
     right: 0;
-    transform: translateY(0);
+    transform: translateY(100%) translateX(100%);
     transition: transform 1s ease;
-    z-index: -1;
     border: 1px inset;
     box-sizing: border-box;
     margin: 0;
     padding: 1rem;
-    display: flex;
-    flex-direction: column;
+    background-color: #cce;
 }
 .hamburger-btn {
     width: 2rem;
@@ -55,11 +54,17 @@ nav {
     background: linear-gradient(#0000 25%, var(--color) 25%, var(--color) 35%, #0000 35%, #0000 45%, var(--color) 45%, var(--color) 55%, #0000 55%, #0000 65%, var(--color) 65%, var(--color) 75%, #0000 75%);
 }
 .nav.open {
-    transform: translateY(100%);
+    transform: translateY(100%) translateX(0);
 }
 .nav.open + .hamburger-btn::after {
     background: linear-gradient(45deg, #0000 40%, var(--color) 40%, var(--color) 60%, #0000 60%),
         linear-gradient(-45deg, #0000 40%, var(--color) 40%, var(--color) 60%, #0000 60%);
+}
+nav li:has(a:hover) {
+    transform: scale(1.2);
+}
+nav a:hover {
+    color: #00b;
 }
 
 main {
@@ -73,16 +78,21 @@ h2 {
 .album {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 1rem;
-
+    grid-gap: 1.5rem;
+    text-align: center;
 }
 .temple-element {
     margin: 0;
 }
 .temp-img-placeholder {
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: 3 / 2;
     border: inset 1px;
+}
+.temple-img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
 }
 
 footer {
@@ -93,6 +103,7 @@ footer {
     width: 100%;
     background-color: var(--footer-bg-color);
     padding-block: 0.5rem;
+    margin-top: 1rem;
 }
 footer p {
     margin: 0;
