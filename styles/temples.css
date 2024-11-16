@@ -70,6 +70,8 @@ nav a:hover {
 main {
     max-width: 800px;
     margin-inline: auto;
+    box-sizing: border-box;
+    padding-inline: 1rem;
 }
 h2 {
     width: 100%;
@@ -83,11 +85,6 @@ h2 {
 }
 .temple-element {
     margin: 0;
-}
-.temp-img-placeholder {
-    width: 100%;
-    aspect-ratio: 3 / 2;
-    border: inset 1px;
 }
 .temple-img {
     width: 100%;
