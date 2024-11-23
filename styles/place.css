@@ -1,0 +1,56 @@
+:root {
+    --header-bg-color: #ccc;
+    --footer-bg-color: var(--header-bg-color);
+
+    --main-bg-color: #def;
+
+    --page-width: 100vw;
+}
+body, h1 {
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eee;
+}
+
+header {
+    text-align: center;
+    background-color: var(--header-bg-color);
+    width: var(--page-width);
+}
+
+main {
+    background-color: var(--main-bg-color);
+    width: var(--page-width);
+    height: fit-content;
+    position: relative;
+}
+.hero-img source, .hero-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.data, .weather {
+    width: 100%;
+    text-align: center;
+    padding-block: 2rem;
+    border-block: 1px solid #0002
+}
+.data-info span, .weather-info span{
+    font-weight: 100;
+}
+.weather h2, .weather h3, .data h2, .data h3 {
+    margin-block: .5rem;
+}
+.weather-icon {
+    width: 20%;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--footer-bg-color);
+    width: var(--page-width);
+}
