@@ -24,8 +24,8 @@
         align-items: center;
         justify-content: center;
     }
-    .weather .weather-icon-large {
-        content: '';
+    .weather h2::after {
+        content: '⛅';
         display: inline-block;
         background-image: url("../images/weather-icon.svg");
         width: 2rem;
