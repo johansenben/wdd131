@@ -1,5 +1,5 @@
 @media (min-width: 600px) {
-    .weather-icon {
+    .weather-icon-small {
         display: none;
     }
     .data, .weather {
@@ -24,11 +24,11 @@
         align-items: center;
         justify-content: center;
     }
-    .weather h2::after {
+    .weather .weather-icon-large {
         content: '';
         display: inline-block;
         background-image: url("../images/weather-icon.svg");
         width: 2rem;
         height: 2rem;
-    }
+    } 
 }
