@@ -1,4 +1,6 @@
 :root {
+    font-family: "Roboto", sans-serif;
+    
     --header-bg-color: #ccc;
     --footer-bg-color: var(--header-bg-color);
 
@@ -20,6 +22,7 @@ header {
     text-align: center;
     background-color: var(--header-bg-color);
     width: var(--page-width);
+    padding-block: 1rem;
 }
 
 main {
@@ -28,25 +31,42 @@ main {
     height: fit-content;
     position: relative;
 }
-.hero-img source, .hero-img img {
+.hero img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 .data, .weather {
     width: 100%;
-    text-align: center;
     padding-block: 2rem;
-    border-block: 1px solid #0002
+    border-block: 1px solid #0002;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
-.data-info span, .weather-info span{
-    font-weight: 100;
-}
-.weather h2, .weather h3, .data h2, .data h3 {
+.data h2, .weather h2 {
+    text-align: center;
     margin-block: .5rem;
 }
+.data-block, .weather-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: .25rem;
+}
+.data-block h3, .weather-block h3 {
+    margin: 0;
+}
+.data-block span, .weather-block span {
+    margin-block: 0;
+    margin-left: 1rem;
+}
+
 .weather-icon {
     width: 20%;
+    text-align: center;
+    font-size: 4rem;
+    margin: 0;
 }
 
 footer {

@@ -23,27 +23,60 @@
         <h1>Alberta</h1>
     </header>
     <main>
-        <picture class="hero-img">
+        <picture class="hero">
             <source srcset="images/alberta-large.webp" media="(min-width: 600px)">
-            <img src="images/unoptimized/alberta-small.jpg" alt="Alberta Image">
+            <img src="images/alberta-small.webp" alt="Alberta Image">
         </picture>
         <section class="data">
             <h2>Data</h2>
-            <h3 class="data-info">Area: <span>661,848 km&sup2;</span></h3>
-            <h3 class="data-info">Population: <span>4,888,723</span></h3>
-            <h3 class="data-info">Capital: <span>Edomonton</span></h3>
-            <h3 class="data-info">Languages: <span>English</span></h3>
-            <h3 class="data-info">Time Zone: <span>UTC-7</span></h3>
-            <h3 class="data-info">Calling Code: <span>+1</span></h3>
-            <h3 class="data-info">Internet TLD: <span>.ca</span></h3>
+            <div class="data-block">
+                <h3>Area:</h3>
+                <span>661,848 km&sup2;</span>
+            </div>
+            <div class="data-block">
+                <h3>Population:</h3>
+                <span>4,888,723</span>
+            </div>
+            <div class="data-block">
+                <h3>Capital:</h3>
+                <span>Edomonton</span>
+            </div>
+            <div class="data-block">
+                <h3>Languages:</h3>
+                <span>English</span>
+            </div>
+            <div class="data-block">
+                <h3>Time Zone:</h3>
+                <span>UTC-7</span>
+            </div>
+            <div class="data-block">
+                <h3>Calling Code:</h3>
+                <span>+1</span>
+            </div>
+            <div class="data-block">
+                <h3>Internet TLD:</h3>
+                <span>.ca</span>
+            </div>
         </section>
         <section class="weather">
             <h2>Weather</h2>
-            <img class="weather-icon" src="images/weather-icon.svg" alt="Weather Icon">
-            <h3 class="weather-info">Temperature: <span></span></h3>
-            <h3 class="weather-info">Conditions: <span></span></h3>
-            <h3 class="weather-info">Wind: <span></span></h3>
-            <h3 class="weather-info">Wind Chill: <span></span></h3>
+            <div class="weather-icon">⛅</div>
+            <div class="weather-block">
+                <h3>Temperature:</h3>
+                <span id="temp"></span>
+            </div>
+            <div class="weather-block">
+                <h3>Conditions:</h3>
+                <span>Snowing</span>
+            </div>
+            <div class="weather-block">
+                <h3>Wind:</h3>
+                <span id="wind-speed"></span>
+            </div>
+            <div class="weather-block">
+                <h3>Wind Chill:</h3>
+                <span id="wind-chill"></span>
+            </div>
         </section>
     </main>
     <footer>
