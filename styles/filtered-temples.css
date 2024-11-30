@@ -1,0 +1,125 @@
+:root {
+    font-family: "Roboto", sans-serif;
+
+    --header-bg-color: #ccc;
+
+    --footer-bg-color: var(--header-bg-color);
+    --footer-txt-color: #000;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ccc;
+    padding: 0rem 2rem;
+}
+nav ul {
+    padding: 0;
+}
+nav li {
+    list-style: none;
+}
+.temple-category-btn {
+    display: none;
+}
+.temple-category-label {
+    user-select: none;
+    cursor: pointer;
+    color: #026;
+}
+.temple-category-btn:checked ~ .temple-category-label {
+    color: #00b;
+    transform: scale(1.2);
+    display: inline-block
+}
+nav {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateY(100%) translateX(100%);
+    transition: transform 1s ease;
+    border: 1px inset;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1rem;
+    background-color: #cce;
+}
+.hamburger-btn {
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+}
+.hamburger-btn::after {
+    --color: #666;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    background: linear-gradient(#0000 25%, var(--color) 25%, var(--color) 35%, #0000 35%, #0000 45%, var(--color) 45%, var(--color) 55%, #0000 55%, #0000 65%, var(--color) 65%, var(--color) 75%, #0000 75%);
+}
+.nav.open {
+    transform: translateY(100%) translateX(0);
+}
+.nav.open + .hamburger-btn::after {
+    background: linear-gradient(45deg, #0000 40%, var(--color) 40%, var(--color) 60%, #0000 60%),
+        linear-gradient(-45deg, #0000 40%, var(--color) 40%, var(--color) 60%, #0000 60%);
+}
+
+main {
+    max-width: 800px;
+    margin-inline: auto;
+    box-sizing: border-box;
+    padding-inline: 1rem;
+}
+h2 {
+    width: 100%;
+    text-align: center;
+}
+.album {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1.5rem;
+    text-align: center;
+}
+.temple-card {
+    margin: 0;
+    border: 1px solid #777;
+    background-color: #def;
+    padding: 1rem;
+}
+.temple-img {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    box-shadow: 0 0 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid #888;
+    margin-top: 1rem;
+}
+figcaption {
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+.temple-card p {
+    margin-block: 0.5rem;
+}
+
+
+footer {
+    color: var(--footer-txt-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--footer-bg-color);
+    padding-block: 0.5rem;
+    margin-top: 1rem;
+}
+footer p {
+    margin: 0;
+}
