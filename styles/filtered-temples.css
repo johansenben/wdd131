@@ -34,7 +34,7 @@ nav li {
 .temple-category-btn.selected {
     color: #00b;
 }
-.temple-category-btn:hover {
+nav a:hover {
     transform: scale(1.2);
 }
 nav {
