@@ -28,11 +28,14 @@ nav li {
 .temple-category-btn {
     color: #026;
     text-decoration: none;
+    display: inline-block;
+    transition: transform 0.5s ease;
 }
 .temple-category-btn.selected {
     color: #00b;
+}
+.temple-category-btn:hover {
     transform: scale(1.2);
-    display: inline-block
 }
 nav {
     position: absolute;
