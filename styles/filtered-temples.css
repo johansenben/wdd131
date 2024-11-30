@@ -24,15 +24,12 @@ nav ul {
 nav li {
     list-style: none;
 }
+
 .temple-category-btn {
-    display: none;
-}
-.temple-category-label {
-    user-select: none;
-    cursor: pointer;
     color: #026;
+    text-decoration: none;
 }
-.temple-category-btn:checked ~ .temple-category-label {
+.temple-category-btn.selected {
     color: #00b;
     transform: scale(1.2);
     display: inline-block

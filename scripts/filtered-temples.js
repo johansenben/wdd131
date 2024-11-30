@@ -103,13 +103,13 @@ const templeCategories = {
     large: temples.filter((temple) => temple.area > 90000),
     small: temples.filter((temple) => temple.area < 10000)
 }
-for (const [category, filteredTemples] of Object.entries(templeCategories)) {
-    document.querySelector(`#${category}-btn`).addEventListener('click', (e) => {
-        album.innerHTML = '';
-        filteredTemples.forEach((temple) => {
-            album.innerHTML += getTempleHTML(temple);
-        });
-        document.querySelector("#category-header").textContent = category.charAt(0).toUpperCase() + category.slice(1);
+
+const urlParams = new URLSearchParams(window.location.search);
+const state = urlParams.get('state') ?? "home";
+if (state in templeCategories) {
+    templeCategories[state].forEach((temple) => {
+        album.innerHTML += getTempleHTML(temple);
     });
+    document.querySelector("#category-header").textContent = state.charAt(0).toUpperCase() + state.slice(1);
+    document.querySelector(`#${state}-btn`).classList.add("selected");
 }
-document.querySelector("#home-btn").click();
