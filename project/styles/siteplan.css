@@ -1,0 +1,97 @@
+:root {
+    --accent-color-1: #3840f5;
+    --accent-color-2: #17b54d;
+
+    --text-color-1: #3d3d3d;
+    --text-color-2: #fff;
+
+    --secondary-color-1: #170e55;
+    --secondary-color-2: #fff;
+    --secondary-color-3: #d9e4ff;
+}
+body, section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+h1 {
+    color: var(--accent-color-1);
+    font-family: "Roboto", serif;
+}
+h2, h3, p {
+    color: var(--text-color-1);
+    font-family: "Roboto", serif;
+}
+
+.horizon-logo {
+    width: 20%;
+}
+
+.scenarios {
+    border: 1px solid #aaa;
+    background-color: var(--secondary-color-2);
+}
+.scenarios h2 {
+    color: var(--text-color-2);
+    width: 100%;
+    background-color: var(--accent-color-1);
+    margin: 0;
+    padding-block: 1rem;
+}
+.scenarios h4 {
+    margin-bottom: 0
+}
+
+.color-schema {
+    background-color: var(--secondary-color-3);
+    width: 100%;
+    padding-bottom: 2rem;
+    border: 1px solid #bbb;
+}
+
+.color-boxes {
+    display: grid;
+    grid-template-columns: 2rem 10rem 2rem 10rem;
+    gap: 0.5rem;
+}
+.color-boxes p {
+    margin: auto 0;
+    text-align: left;
+}
+.color-box {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #888;
+}
+.accent-color-1-box {
+    background-color: var(--accent-color-1);
+}
+.accent-color-2-box {
+    background-color: var(--accent-color-2);
+}
+.text-color-1-box {
+    background-color: var(--text-color-1);
+}
+.text-color-2-box {
+    background-color: var(--text-color-2);
+}
+.secondary-color-1-box {
+    background-color: var(--secondary-color-1);
+}
+.secondary-color-2-box {
+    background-color: var(--secondary-color-2);
+}
+.secondary-color-3-box {
+    background-color: var(--secondary-color-3);
+}
+
+.typography {
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.wireframe {
+    border: 1px solid #00a
+}
