@@ -1,6 +1,6 @@
 :root {
     --accent-color-1: #3840f5;
-    --accent-color-2: #17b54d;
+    --accent-color-2: #139641;
 
     --text-color-1: #3d3d3d;
     --text-color-2: #fff;
@@ -27,6 +27,11 @@ h2, h3, p {
 
 .horizon-logo {
     width: 20%;
+}
+.purpose {
+    margin-bottom: 0.25rem;
+    margin-top: 2rem;
+    color: var(--accent-color-2);
 }
 
 .scenarios {
@@ -64,6 +69,12 @@ h2, h3, p {
     width: 2rem;
     height: 2rem;
     border: 1px solid #888;
+}
+.color-usage .color-box {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    margin-inline: 0.5em;
 }
 .accent-color-1-box {
     background-color: var(--accent-color-1);
