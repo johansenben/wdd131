@@ -34,6 +34,9 @@ h2, h3, p {
     color: var(--accent-color-2);
 }
 
+section {
+    margin-top: 3rem;
+}
 .scenarios {
     border: 1px solid #aaa;
     background-color: var(--secondary-color-2);
@@ -104,5 +107,5 @@ h2, h3, p {
 }
 
 .wireframe {
-    border: 1px solid #00a
+    border: 1px solid #ccc;
 }
