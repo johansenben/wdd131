@@ -9,13 +9,14 @@
     <title>Product Review Form | WDD 131 - Dynamic Web Fundamentals - Benjamin Johansen</title>
 
     <link rel="stylesheet" href="styles/form.css">
-    <link rel="stylesheet" href="styles/forms-large.css">
+    <link rel="stylesheet" href="styles/form-large.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/form.js" defer></script>
 </head>
 <body>
     <header>
@@ -24,60 +25,77 @@
     <main>
         <section>
             <form action="review.html" method="get">
+                <div class="box product-name-box">
+                    <label for="product-name">Product Name</label>
+                    <br>
+                    <select name="prodct-name" id="product-name" required>
+                        <option value="select-a-product" disabled selected>Select A Product...</option>
+                    </select>
+                </div>
 
-                <label for="product-name">Product Name</label>
-                <select name="prodct-name" id="product-name" required>
-                    <option value="select-a-product" disabled selected>Select A Product...</option>
-                </select>
-
-                <div class="rating">
+                <div class="box rating-box">
                     <h2>Overall Rating</h2>
-                    <div>
-                        <label for="stars-1">1 Star</label>
-                        <input type="radio" name="stars" id="stars-1" required>
-                    </div>
-                    <div>
-                        <label for="stars-2">2 Stars</label>
-                        <input type="radio" name="stars" id="stars-2" required>
-                    </div>
-                    <div>
-                        <label for="stars-3">3 Stars</label>
-                        <input type="radio" name="stars" id="stars-3" required>
-                    </div>
-                    <div>
-                        <label for="stars-4">4 Stars</label>
-                        <input type="radio" name="stars" id="stars-4" required>
-                    </div>
-                    <div>
-                        <label for="stars-5">5 Stars</label>
-                        <input type="radio" name="stars" id="stars-5" required>
+                    <div class="rating">
+                        <div>
+                            <label for="stars-1">&star;</label>
+                            <input type="radio" name="stars" id="stars-1" required>
+                        </div>
+                        <div>
+                            <label for="stars-2">&star;&star;</label>
+                            <input type="radio" name="stars" id="stars-2" required>
+                        </div>
+                        <div>
+                            <label for="stars-3">&star;&star;&star;</label>
+                            <input type="radio" name="stars" id="stars-3" required>
+                        </div>
+                        <div>
+                            <label for="stars-4">&star;&star;&star;&star;</label>
+                            <input type="radio" name="stars" id="stars-4" required>
+                        </div>
+                        <div>
+                            <label for="stars-5">&star;&star;&star;&star;&star;</label>
+                            <input type="radio" name="stars" id="stars-5" required>
+                        </div>
                     </div>
                 </div>
 
-                <label for="install-date">Date of Installation</label>
-                <input type="date" name="install-date" id="install-date" required>
+                <div class="box install-date-box">
+                    <label for="install-date">Date of Installation</label>
+                    <input type="date" name="install-date" id="install-date" required>
+                </div>
 
-                <div class="useful-features">
+                <div class="box usefull-features-box">
                     <h2>Which features did you find useful in the product?<br>(Check all that apply)</h2>
 
-                    <input type="checkbox" name="durability" id="durablity">
-                    <label for="durability">Durability</label>
-    
-                    <input type="checkbox" name="ease-of-use" id="ease-of-use">
-                    <label for="ease-of-use">Ease of Use</label>
-
-                    <input type="checkbox" name="performance" id="performance">
-                    <label for="performance">Performance</label>
-
-                    <input type="checkbox" name="design" id="design">
-                    <label for="design">Design</label>
+                    <div class="features">
+                        <div class="feature">
+                            <input type="checkbox" name="durability" id="durablity">
+                            <label for="durability">Durability</label>
+                        </div>
+                        <div class="feature">
+                            <input type="checkbox" name="ease-of-use" id="ease-of-use">
+                            <label for="ease-of-use">Ease of Use</label>
+                        </div>
+                        <div class="feature">
+                            <input type="checkbox" name="performance" id="performance">
+                            <label for="performance">Performance</label>
+                        </div>
+                        <div class="feature">
+                            <input type="checkbox" name="design" id="design">
+                            <label for="design">Design</label>
+                        </div>
+                    </div>
                 </div>
 
-                <label for="written-review">Written Review</label>
-                <textarea name="written-review" id="written-review"></textarea>
+                <div class="box written-review-box">
+                    <label for="written-review">Written Review</label>
+                    <textarea name="written-review" id="written-review"></textarea>
+                </div>
 
-                <label for="name">Your Name (Optional)</label>
-                <input type="text" name="name" id="name">
+                <div class="box name-box">
+                    <label for="name">Your Name (Optional)</label>
+                    <input type="text" name="name" id="name">
+                </div>
 
                 <button type="submit">Submit Review</button>
             </form>

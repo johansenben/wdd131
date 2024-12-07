@@ -1,0 +1,94 @@
+:root {
+    background-color: #eee;
+}
+body {
+    width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #ddd;
+    border: 1px solid;
+}
+header, footer {
+    text-align: center;
+}
+
+main, section {
+    width: 100%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    margin-inline: 1rem;
+    padding: 1rem;
+    margin-block: 0.5rem;
+}
+
+.product-name-box {
+    border: 1px solid;
+}
+
+.rating-box {
+    border: 1px solid;
+}
+.rating-box h2 {
+    text-align: center;
+    font-weight: 200;
+    font-size: 1.5rem;
+    margin: 0.25rem;
+}
+.rating {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+}
+.rating div {
+    display: grid;
+    justify-content: center;
+}
+
+.install-date-box {
+    border: 1px solid;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.usefull-features-box {
+    border: 1px solid;
+}
+.usefull-features-box h2 {
+    font-weight: 200;
+    font-size: 1rem;
+    margin: 0.25rem;
+}
+
+.written-review-box {
+    border: 1px solid;
+    display: grid;
+}
+
+.name-box {
+    border: 1px solid;
+    padding: 1rem;
+    display: grid;
+}
+
+button {
+    margin: 0 auto;
+}
+
+footer {
+    margin-top: 2rem;
+    background-color: #ccc;
+    padding-block: 0.25rem;
+}
+footer * {
+    margin: 0.25rem;
+}
+
+.review-main {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
