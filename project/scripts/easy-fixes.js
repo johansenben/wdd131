@@ -105,7 +105,7 @@ const categories = [
         ]
     },
     {
-        heading: "Phone or Intercom System (No personal phones)",
+        heading: "Phone or Intercom/Paging System (No personal phones)",
         headingID: "phone-intercom",
         scenarios: [
             {

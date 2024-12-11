@@ -1,0 +1,40 @@
+h1 {
+    text-align: center;
+}
+.flex {
+    display: flex;
+}
+
+form {
+    display: grid;
+    padding: 1rem;
+}
+.form-field {
+    display: grid;
+    padding: 1rem;
+}
+.flex-field {
+    display: flex;
+    gap: 0.5rem;
+}
+.form-field input {
+    margin-right: 2rem;
+}
+.field-header {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0.5rem;
+}
+.field-header + *  {
+    margin-left: 2rem;
+}
+
+.form-field:has(#description) {
+    flex-direction: column;
+}
+
+button {
+    width: fit-content;
+    margin: 0 auto;
+}
+
