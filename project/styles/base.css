@@ -1,0 +1,54 @@
+:root {
+    --accent-color-1: #3840f5;
+    --accent-color-2: #139641;
+
+    --text-color-1: #3d3d3d;
+    --text-color-2: #fff;
+
+    --secondary-color-1: #170e55;
+    --secondary-color-2: #fff;
+    --secondary-color-3: #d9e4ff;
+
+    --nav-bg-color: var(--secondary-color-3);
+    --nav-a-color: var(--text-color-1);
+    --nav-a-hover-color: var(--accent-color-1);
+
+    font-family: "Roboto", serif;
+}
+
+body {
+    margin: 0;
+}
+
+.hidden {
+    visibility: hidden;
+    position: absolute;
+}
+
+header {
+    display: flex;
+    padding: 1rem 3rem;
+    background-color: var(--nav-bg-color);
+}
+.horizon-logo {
+    width: 15%;
+}
+header ul {
+    display: flex;
+    gap: 2rem;
+    margin-left: auto;
+}
+.nav-li {
+    list-style: none;
+}
+.nav-li a {
+    text-decoration: none;
+    color: var(--nav-a-color);
+    display: block;
+    transition: transform 0.25s ease;
+    font-size: 1.25rem;
+}
+.nav-li:hover a {
+    color: var(--nav-a-hover-color);
+    transform: scale(1.1);
+}

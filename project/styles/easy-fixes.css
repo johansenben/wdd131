@@ -1,0 +1,49 @@
+main {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 100%;
+    padding-inline: 2rem;
+}
+footer {
+    margin-bottom: 100vh; /* anchors actually link to the right spot and don't stop at the bottom of the page*/
+}
+
+
+.legend li {
+    list-style: none;
+}
+.legend a {
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+}
+section {
+    display: grid;
+}
+
+.details-box {
+    margin-left: 2rem;
+}
+.details-label {
+    text-decoration: underline;
+    margin-bottom: 0;
+}
+.details-box h4:target {
+    color: var(--accent-color-2);
+}
+.details-box h4 {
+    margin: 0;
+    padding-top: 2rem;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-block: 0.5rem;
+}
+.logos img {
+    width: 2rem;
+}
