@@ -9,18 +9,15 @@ footer {
 }
 
 
-.legend li {
+#legend li {
     list-style: none;
 }
-.legend a {
+#legend a {
     text-decoration: none;
 }
 
-h2 {
+h1 {
     text-align: center;
-}
-section {
-    display: grid;
 }
 
 .details-box {
