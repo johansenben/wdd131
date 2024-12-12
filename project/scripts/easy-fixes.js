@@ -211,14 +211,16 @@ const fixesContainer = document.querySelector("#fixes");
 const addScenarios = (category) => {
     if (category.scenarios && category.scenarios.length > 0) {
         legendList.innerHTML += `<li><a href="#${category.headingID}">${category.heading}</a></li>`;
-        fixesContainer.innerHTML += `<h2 id="${category.headingID}">${category.heading}</h2><div class="details-box">`;
+
+        let html = `<h2 class="details-label" id="${category.headingID}">${category.heading}</h2><div class="details-box">`;
         category.scenarios.forEach((scenario) => {
-            fixesContainer.innerHTML += `
+            html += `
                 <h3 ${"id=\"" + scenario.scenarioID + '"' ?? ''}>${scenario.scenario}</h3>
                 ${scenario.content}
             `;
         });
-        fixesContainer.innerHTML += "</div>";
+        html += "</div>";
+        fixesContainer.innerHTML += html;
     }
     
 }

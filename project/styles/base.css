@@ -26,29 +26,61 @@ body {
 }
 
 header {
+    position: relative;
     display: flex;
+    align-items: center;
     padding: 1rem 3rem;
     background-color: var(--nav-bg-color);
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 .horizon-logo {
     width: 15%;
+    max-height: 4rem;
 }
 header ul {
     display: flex;
     gap: 2rem;
     margin-left: auto;
+
+    flex-direction: column;
 }
 .nav-li {
     list-style: none;
 }
 .nav-li a {
     text-decoration: none;
-    color: var(--nav-a-color);
+    color: var(--secondary-color-2);
     display: block;
     transition: transform 0.25s ease;
     font-size: 1.25rem;
 }
+
+.nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-120%);
+    padding: 1rem;
+    background-color: var(--accent-color-2);
+}
 .nav-li:hover a {
     color: var(--nav-a-hover-color);
     transform: scale(1.1);
+}
+#hamburger-btn {
+    width: 1rem;
+    height: 1rem;
+    background-color: #000;
+    margin-left: auto;
+}
+#hamburger-btn.open + .nav {
+    display: flex;
+    transform: translateY(0);
+}
+#close-menu {
+    list-style: none;
+    color: var(--secondary-color-2);
+    text-decoration: underline;
+    font-size: 0.75rem;
 }

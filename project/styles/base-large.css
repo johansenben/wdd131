@@ -1,0 +1,21 @@
+@media only screen and (min-width: 600px) {
+    header ul {
+        flex-direction: row;
+        display: flex;
+    }
+    #hamburger-btn {
+        display: none;
+    }
+    .nav {
+        background-color: #0000;
+        position: relative;
+        margin-left: auto;
+        transform: translate(0);
+    }
+    .nav-li a {
+        color: var(--nav-a-color);
+    }
+    #close-menu {
+        display: none;
+    }
+}

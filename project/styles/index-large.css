@@ -1,0 +1,10 @@
+@media only screen and (min-width: 600px) {
+    .contact-us {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .contact-info {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+    }
+}
