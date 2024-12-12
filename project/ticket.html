@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/base-large.css">
     <link rel="stylesheet" href="styles/ticket.css">
+    <link rel="stylesheet" href="styles/ticket-large.css">
 
     <script src="scripts/header.js" defer></script>
     <script src="scripts/ticket.js" defer></script>
@@ -24,15 +25,13 @@
     <main>
         <h1>Submit a Ticket</h1>
         <section>
-            <form action="ticket-submitted.html" method="get">
-                <div class="form-field flex-field name">
-                    <label for="fname">First Name (Required):</label>
-                    <input type="text" name="fname" id="fname" required>
-
-                    <label for="lname">Last Name (Required):</label>
-                    <input type="text" name="lname" id="lname" required>
+            <form id="ticket-form" action="ticket-submitted.html" method="get">
+                <div class="form-field flex-on-large name">
+                    <label for="fname">First Name (Required): <input type="text" name="fname" id="fname" required></label>
+                    
+                    <label for="lname">Last Name (Required): <input type="text" name="lname" id="lname" required></label>
                 </div>
-                <div class="form-field flex-field location">
+                <div class="form-field flex-on-large location">
                     <label for="school">School (Required):</label>
                     <input type="text" name="school" id="school" required>
 
@@ -40,7 +39,7 @@
                     <input type="text" name="room" id="room">
                 </div>
 
-                <div class="form-field flex-field">
+                <div class="form-field flex-on-large">
                     <label for="tech-category">Technology Category:</label>
                     <select name="tech-category" id="tech-category" required>
                         <option value="" disabled selected>Select A Category...</option>
@@ -61,6 +60,7 @@
 
                 <button type="submit">Submit Ticket</button>
             </form>
+            <div id="total-tickets-submitted"></div>
         </section>
     </main>
     <footer>

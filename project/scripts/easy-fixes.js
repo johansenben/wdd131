@@ -105,7 +105,7 @@ const categories = [
         ]
     },
     {
-        heading: "Phone or Intercom/Paging System (No personal phones)",
+        heading: "Phone or Intercom/Paging System",
         headingID: "phone-intercom",
         scenarios: [
             {
@@ -208,16 +208,23 @@ const categories = [
 const legendList = document.querySelector("#legend ul");
 
 const fixesContainer = document.querySelector("#fixes");
+const getScenarioHTML = (scenario) => {
+    return `
+        <h3 ${scenario.scenarioID ? `id="${scenario.scenarioID}"` : ''}>${scenario.scenario}</h3>
+        ${scenario.content}
+    `;
+}
 const addScenarios = (category) => {
-    if (category.scenarios && category.scenarios.length > 0) {
+    if (category.scenarios) {
+        if (category.scenarios.length <= 0 || category.heading === '' || category.headingID === '')
+            return;
         legendList.innerHTML += `<li><a href="#${category.headingID}">${category.heading}</a></li>`;
 
         let html = `<h2 class="details-label" id="${category.headingID}">${category.heading}</h2><div class="details-box">`;
         category.scenarios.forEach((scenario) => {
-            html += `
-                <h3 ${"id=\"" + scenario.scenarioID + '"' ?? ''}>${scenario.scenario}</h3>
-                ${scenario.content}
-            `;
+            if (scenario.scenario === '' || scenario.content === '')
+                return;
+            html += getScenarioHTML(scenario);
         });
         html += "</div>";
         fixesContainer.innerHTML += html;

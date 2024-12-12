@@ -20,7 +20,7 @@ const subForms = {
     ],
     "chromebook": [
         `<label for="chromebook-model">Chromebook Model: <input type="text" name="chromebook-model" id="chromebook-model"></label>`,
-        `<label for="chromebook-serial-number">Chromebook Model: <input type="text" name="chromebook-serial-number" id="chromebook-serial-number"></label>
+        `<label for="chromebook-serial-number">Chromebook Serial Number: <input type="text" name="chromebook-serial-number" id="chromebook-serial-number"></label>
         <details>
             <summary>Where is the serial number?</summary>
             <p>There is usually a sticker on the computer with the serial number. The serial number should be labeled by "Serial Number, "S/N" or "SN". If the sticker is missing and your chromebook can turn on, press Alt + V and the serial number will appear on the top-right corner.</p>
@@ -62,12 +62,33 @@ const subForms = {
 
 const techCategory = document.querySelector("#tech-category");
 const subForm = document.querySelector("#sub-form");
-techCategory.addEventListener("change", (e) => {
-    let value = e.target.value ?? "other";
+
+const setSubForm = (category) => {
     subForm.innerHTML = '';
-    if (!(value in subForms))
-        value = "other";
-    subForms[value].forEach((field) => {
+    if (!(category in subForms))
+        category = "other";
+    subForms[category].forEach((field) => {
         subForm.innerHTML += `<div class="form-field">${field}</div>`;
     });
+}
+techCategory.addEventListener("change", (e) => {
+    let value = e.target.value ?? "other";
+    setSubForm(value);
 });
+
+
+let totalTickets = parseInt(window.localStorage.getItem("total-tickets")) || 0;
+document.querySelector("#total-tickets-submitted").textContent = `Total Tickets Submitted: ${totalTickets}`;
+
+document.querySelector("#ticket-form").addEventListener("submit", (e) => {
+    totalTickets++;
+    window.localStorage.setItem("total-tickets", `${totalTickets}`);
+    document.querySelector("#total-tickets-submitted").textContent = `Total Tickets Submitted: ${totalTickets}`;
+});
+
+window.onload = () => {
+    //re-add subform after back arrow is pressed
+    let value = techCategory.value ?? '';
+    if (value)
+        setSubForm(value);
+}

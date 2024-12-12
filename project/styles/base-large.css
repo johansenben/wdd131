@@ -1,4 +1,4 @@
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
     header ul {
         flex-direction: row;
         display: flex;
@@ -11,6 +11,10 @@
         position: relative;
         margin-left: auto;
         transform: translate(0);
+        padding: 0;
+    }
+    header ul {
+        padding: 0;
     }
     .nav-li a {
         color: var(--nav-a-color);

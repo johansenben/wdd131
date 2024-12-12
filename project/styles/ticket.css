@@ -1,3 +1,12 @@
+:root {
+    --label-color: var(--text-color-1);
+
+    --submit-btn-bg: var(--secondary-color-3);
+    --submit-btn-text-color: var(--secondary-color-1);
+
+    --details-bg: var(--secondary-color-3);
+    --details-text-color: var(--text-color-1)
+}
 h1 {
     text-align: center;
 }
@@ -13,9 +22,14 @@ form {
     display: grid;
     padding: 1rem;
 }
-.flex-field {
-    display: flex;
+.flex-on-large {
+    display: grid;
     gap: 0.5rem;
+}
+.form-field label {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--label-color);
 }
 .form-field input {
     margin-right: 2rem;
@@ -33,8 +47,28 @@ form {
     flex-direction: column;
 }
 
+details p {
+    border: 1px solid;
+    padding: 1rem;
+    background-color: var(--details-bg);
+    color: var(--details-text-color);
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+}
+
 button {
     width: fit-content;
     margin: 0 auto;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--submit-btn-bg);
+    color: var(--submit-btn-text-color);
+    transition: transform 0.25s ease;
+}
+button:hover, button:focus {
+    transform: scale(1.1);
 }
 
+#total-tickets-submitted {
+    text-align: center;
+}
