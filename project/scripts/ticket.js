@@ -15,18 +15,18 @@ const subForms = {
             <summary>Where is the serial number?</summary>
             <p>There is usually a sticker on the computer with the serial number. The serial number should be labeled by "Serial Number, "S/N" or "SN".</p>
         </details>`,
-        `<label for="description">Describe Problem:</label>
-        <textarea name="description" id="description"></textarea>`
+        `<label for="description">Describe Problem (Required):</label>
+        <textarea name="description" id="description" required></textarea>`
     ],
     "chromebook": [
         `<label for="chromebook-model">Chromebook Model: <input type="text" name="chromebook-model" id="chromebook-model"></label>`,
         `<label for="chromebook-serial-number">Chromebook Serial Number: <input type="text" name="chromebook-serial-number" id="chromebook-serial-number"></label>
         <details>
             <summary>Where is the serial number?</summary>
-            <p>There is usually a sticker on the computer with the serial number. The serial number should be labeled by "Serial Number, "S/N" or "SN". If the sticker is missing and your chromebook can turn on, press Alt + V and the serial number will appear on the top-right corner.</p>
+            <p>There is usually a sticker on the chromebook with the serial number. The serial number should be labeled by "Serial Number, "S/N" or "SN". If the sticker is missing and your chromebook can turn on, press Alt + V and the serial number will appear on the top-right corner of the screen.</p>
         </details>`,
-        `<label for="description">Describe Problem:</label>
-        <textarea name="description" id="description"></textarea>`
+        `<label for="description">Describe Problem (Required):</label>
+        <textarea name="description" id="description" required></textarea>`
     ],
     "internet": [
         `<h2 class="field-header">Wifi or Ethernet?</h2>
@@ -39,19 +39,19 @@ const subForms = {
             <summary>How to find my IP address on Windows 10</summary>
             <p>Type "cmd" in the start menu and open "Command Prompt". Type "ipconfig" and press enter. The IP address is labeled by "IPv4 Address". It should look like ##.##.##.###, where the hashtags/pound signs are numbers.</p>
         </details>`,
-        `<label for="description">Describe Problem:</label>
-        <textarea name="description" id="description"></textarea>`
+        `<label for="description">Describe Problem (Required):</label>
+        <textarea name="description" id="description" required></textarea>`
     ],
     "projector": [
         `<label for="projector-model">Projector Model</label>
         <input type="text" name="projector-model" id="projector-model">`,
-        `<label for="description">Describe Problem:</label>
-        <textarea name="description" id="description"></textarea>`
+        `<label for="description">Describe Problem (Required):</label>
+        <textarea name="description" id="description" required></textarea>`
     ],
     "printer": [
         `<label for="printer-mmodel">Printer/Scanner Model: <input type="text" name="printer-model" id="printer-model"></label>`,
-        `<label for="description">Describe Problem:</label>
-        <textarea name="description" id="description"></textarea>`
+        `<label for="description">Describe Problem (Required):</label>
+        <textarea name="description" id="description" required></textarea>`
     ],
 
     "other": [ //monitor, phone-intercom, viewboard-smartboard or any others that only have a decription field

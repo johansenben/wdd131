@@ -6,14 +6,14 @@ const categories = [
             {
                 scenario: "What is the difference between \"restart\" and \"shut down\" on Windows 10?",
                 scenarioID: "shut-down-vs-restart",
-                content: "<p>When you click \"shut down\", Windws attempts to save the state to make it turn back on faster, which also tends to save any problems on the computer. \"restart\" closes everything and sometimes fixes problems or makes the computer run faster. It is reccomended that every comuter gets restarted at least every 1-2 weeks. (Note: Your computer will probably be slow for a few minutes after restarting)</p>"
+                content: "<p>When you click \"shut down\", Windows attempts to save the state to make it turn back on faster, which also tends to save any problems on the computer. \"Restart\" closes everything and sometimes fixes problems or makes the computer run faster. It is reccomended that every comuter gets restarted at least every 1-2 weeks. (Note: Your computer will probably be slow for a few minutes after restarting).</p>"
             },
             {
                 scenario: "My computer won't turn on.",
                 content: `
                     <ol>
                         <li>Check if the power is connected.</li>
-                        <li>Check if your computer makes any noise (it can be really quiet) and check if the light on the power button is on. The fans are usually louder right after you press the power button. If the computer makes noise or the light on the power button is on, then the problem is most likely related to the monitor.</li>
+                        <li>Check if your computer makes any noise (it can be really quiet) and check if the light on the power button is on. The fans are usually louder right after you press the power button. If the computer makes noise or the light on the power button is on, then the problem is most likely related to the monitor, cable or ports.</li>
                     </ol>`
             },
             {
@@ -37,8 +37,8 @@ const categories = [
                 scenario: "Chrome or another browser is being slow or not working properly.",
                 content: `
                     <ol>
-                        <li>Clear your browser cache. Do this by clicking the 3 dots (usually in the top-right corner), then click "delete browsing date", then "delete data". It might be different on different browsers.</li>
-                        <li>Open the browser in incognito mode. in chrome, click the 3 dots on the top-right corner and click "new incognito window".</li>
+                        <li>Clear your browser cache. Do this by clicking the 3 dots (usually in the top-right corner), then click "delete browsing data", then "delete data". It might be different on different browsers.</li>
+                        <li>Open the browser in incognito mode. In chrome, click the 3 dots on the top-right corner and click "new incognito window".</li>
                     </ol>`
             }
         ]
@@ -52,7 +52,7 @@ const categories = [
                 content: `
                     <ol>
                         <li>Make sure the cables are connected properly.</li>
-                        <li>Is the light on the power button on? If the light is on, but the monitor isn't displaying anything, it could be a problem with the monitor, the computer, a cable or an adapter. If the light is on, It is probably a problem with the monitor or the power cable.</li>
+                        <li>Is the light on the power button on? If the light is on, but the monitor isn't displaying anything, it could be a problem with the monitor, the computer, a cable or an adapter. If the light is off, It is probably a problem with the monitor or the power cable.</li>
                     </ol>
                 `
             },
@@ -98,7 +98,7 @@ const categories = [
                 scenarioID: "chromebook-not-charging",
                 content: `
                     <ol>
-                        <li>When you plug it in, is there a light on the side that turns on? If no light turns on, try a different charging cable. If it still doesn't change, it could be a problem with the charging port or the motherboard. If the light does turn on, It could be the motherboard, battery or charging port.</li>
+                        <li>When you plug it in, is there a light on the side that turns on? If no light turns on, try a different charging cable. If it still doesn't charge, it could be a problem with the charging port or the motherboard. If the light does turn on, It could be the motherboard, battery or charging port.</li>
                     </ol>
                 `
             }
@@ -112,7 +112,7 @@ const categories = [
                 scenario: "My phone won't turn on.",
                 content: `
                     <ol>
-                        <li>Did the phone get plugged into a different ethernet port. The phones in the division use POE (power over ethernet) and unused ethernet port should be disabled. It is possible that the phone was plugged into a disabled port or the port has POE turned off.</li>
+                        <li>Did the phone get plugged into a different ethernet port? The phones in the division use POE (power over ethernet) and unused ethernet port should be disabled. It is possible that the phone was plugged into a disabled port or the port has POE turned off.</li>
                     </ol>
                 `
             },
@@ -136,7 +136,7 @@ const categories = [
                 content: `
                     <ol>
                         <li>
-                            Does your device have a wifi/ethernet symbol? It is usually onthe bottom-right corner on a windows computer or chromebook. An a smartphone, ipad or tablet, it is usually on the top-right corner.
+                            Does your device have a wifi/ethernet symbol? It is usually on the bottom-right corner on a windows computer or chromebook. On a smartphone, ipad or tablet, it is usually on the top-right corner. (Phones, tablets or ipads probably won't have an ethernet symbol.)
                             <div class="logos">
                                 <img src="images/wifi-symbol.svg" alt="Wifi Symbol" loading="lazy">
                                 <img src="images/ethernet-symbol.svg" alt="Ethernet Symbol" loading="lazy">
@@ -153,7 +153,7 @@ const categories = [
                     <ol>
                         <li>Make sure you aren't connected to HSD Open. In the internet settings on your device click/tap on HSD Open and click "forget". If it says "connect" instead of "forget", then you have never connected to HSD Open on your device</li>
                         <li>Try turning your wifi off and on again.</li>
-                        <li>TMake sure that you are using youre computer username/password to log in to HSD BYOD.</li>
+                        <li>Make sure that you are using your computer username/password to log in to HSD BYOD.</li>
                     </ol>
                 `
             },
@@ -161,7 +161,7 @@ const categories = [
                 scenario: "Ethernet",
                 content: `
                     <ol>
-                        <li>Check if the ethernet cable is connected properly. there should be a flickering light on each end of the cable.</li>
+                        <li>Check if the ethernet cable is connected properly. There should be a flickering light on each end of the cable.</li>
                     </ol>
                 `
             }
@@ -196,7 +196,8 @@ const categories = [
                 scenario: "My computer says my printer is offline.",
                 content: `
                     <ol>
-                        <li>Make sure the printer is on and the ethernet cable is connected. the ethernet cable should have a flickering light on each end.</li>
+                        <li>Make sure that you have wifi or ethernet on your computer.</li>
+                        <li>Make sure the printer is on and the ethernet cable is connected. The ethernet cable should have a flickering light on each end.</li>
                         <li>Check if there is a different printer with a similar name on your computer. You might be trying to use an old printer that didn't get removed from your computer.</li>
                     </ol>
                 `
