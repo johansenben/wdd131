@@ -24,45 +24,43 @@
     <header id="header"></header>
     <main>
         <h1>Submit a Ticket</h1>
-        <section>
-            <form id="ticket-form" action="ticket-submitted.html" method="get">
-                <div class="form-field flex-on-large name">
-                    <label for="fname">First Name (Required): <input type="text" name="fname" id="fname" required></label>
-                    
-                    <label for="lname">Last Name (Required): <input type="text" name="lname" id="lname" required></label>
-                </div>
-                <div class="form-field flex-on-large location">
-                    <label for="school">School (Required):</label>
-                    <input type="text" name="school" id="school" required>
+        <form id="ticket-form" action="ticket-submitted.html" method="get">
+            <div class="form-field flex-on-large name">
+                <label for="fname">First Name (Required): <input type="text" name="fname" id="fname" required></label>
+                
+                <label for="lname">Last Name (Required): <input type="text" name="lname" id="lname" required></label>
+            </div>
+            <div class="form-field flex-on-large location">
+                <label for="school">School (Required):</label>
+                <input type="text" name="school" id="school" required>
 
-                    <label for="room">Room or Location in School:</label>
-                    <input type="text" name="room" id="room">
-                </div>
+                <label for="room">Room or Location in School:</label>
+                <input type="text" name="room" id="room">
+            </div>
 
-                <div class="form-field flex-on-large">
-                    <label for="tech-category">Technology Category:</label>
-                    <select name="tech-category" id="tech-category" required>
-                        <option value="" disabled selected>Select A Category...</option>
-                        <option value="request-order">Request or Order</option>
-                        <option value="computer">Computer, Keyboard or Mouse</option>
-                        <option value="monitor">Monitor/Screen</option>
-                        <option value="chromebook">Chromebook</option>
-                        <option value="phone-intercom">Phone Intercom/Paging System</option>
-                        <option value="internet">Internet, Wifi or Ethernet</option>
-                        <option value="projector">Projector</option>
-                        <option value="viewboard-smartboard">Viewboard or Smartboard</option>
-                        <option value="printer">Printer or Scanner</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
+            <div class="form-field flex-on-large">
+                <label for="tech-category">Technology Category:</label>
+                <select name="tech-category" id="tech-category" required>
+                    <option value="" disabled selected>Select A Category...</option>
+                    <option value="request-order">Request or Order</option>
+                    <option value="computer">Computer, Keyboard or Mouse</option>
+                    <option value="monitor">Monitor/Screen</option>
+                    <option value="chromebook">Chromebook</option>
+                    <option value="phone-intercom">Phone Intercom/Paging System</option>
+                    <option value="internet">Internet, Wifi or Ethernet</option>
+                    <option value="projector">Projector</option>
+                    <option value="viewboard-smartboard">Viewboard or Smartboard</option>
+                    <option value="printer">Printer or Scanner</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
 
-                <div id="sub-form"></div>
+            <div id="sub-form"></div>
 
-                <button type="submit">Submit Ticket</button>
-            </form>
-            <br>
-            <div id="total-tickets-submitted"></div>
-        </section>
+            <button type="submit">Submit Ticket</button>
+        </form>
+        <br>
+        <div id="total-tickets-submitted"></div>
     </main>
     <footer>
 
