@@ -11,10 +11,18 @@ footer {
 
 #legend li {
     list-style: none;
+    margin-top: 0.5rem;
 }
 #legend a {
     text-decoration: none;
+    transition: transform 0.25s ease;
+    color: var(--text-color-1); 
 }
+#legend a:hover {
+    transform: scale(1.1);
+    color: var(--accent-color-1);
+    display: block;
+}                       
 
 h1 {
     text-align: center;
@@ -24,7 +32,7 @@ h1 {
     margin-left: 2rem;
 }
 .details-label {
-    text-decoration: underline;
+    border-bottom: 1px solid;
     margin-bottom: 0;
 }
 .details-box h3:target {

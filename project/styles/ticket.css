@@ -5,7 +5,10 @@
     --submit-btn-text-color: var(--secondary-color-1);
 
     --details-bg: var(--secondary-color-3);
-    --details-text-color: var(--text-color-1)
+    --details-text-color: var(--text-color-1);
+
+    --form-bg: var(--secondary-color-2);
+    --form-border-color: var(--text-color-1);
 }
 h1 {
     text-align: center;
@@ -17,6 +20,9 @@ h1 {
 form {
     display: grid;
     padding: 1rem;
+    margin-inline: 1rem;
+    background-color: var(--form-bg);
+    border: 1px solid var(--form-border-color);
 }
 .form-field {
     display: grid;
